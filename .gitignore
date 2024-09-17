@@ -29,5 +29,5 @@ coverage
 
 *.tsbuildinfo
 
-*test*
+*.test*
 !vitest.config.js
