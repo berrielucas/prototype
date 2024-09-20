@@ -1,10 +1,14 @@
 <script setup>
 import { useCounterStore } from '@/stores/counter'
-import { ref } from 'vue'
+import { ref, onBeforeMount } from 'vue'
 import { RouterLink, RouterView, useRouter } from 'vue-router'
 
 const store = useCounterStore();
 const router = useRouter();
+
+onBeforeMount(()=>{
+  router.push({ name: 'imApp' });
+});
 
 
 const itemsPrototype = ref([

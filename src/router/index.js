@@ -15,7 +15,13 @@ const router = createRouter({
       name: 'imApp',
       component: () => import('../views/imrb/IMAppView.vue'),
       children: []
-    }
+    },
+    {
+      path: '/inscricao-matricula/:idPrototype',
+      name: 'prot',
+      component: () => import('../views/imrb/PrototypeView.vue'),
+      children: []
+    },
   ]
 })
 
