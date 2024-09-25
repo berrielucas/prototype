@@ -1,9 +1,9 @@
 <script setup>
-import { useCounterStore } from '@/stores/counter';
-import { ref } from 'vue';
-import { useDisplay } from 'vuetify/lib/framework.mjs';
+import { useCounterStore } from '@/stores/counter'
+import { ref } from 'vue'
+import { useDisplay } from 'vuetify/lib/framework.mjs'
 
-const store = useCounterStore();
+const store = useCounterStore()
 
 const { height } = useDisplay()
 
@@ -17,9 +17,8 @@ const items = ref([
     key: '02',
     title: 'Downloads',
     icon: 'mdi-robot-angry'
-  },
-]);
-
+  }
+])
 </script>
 
 <template>
@@ -44,13 +43,13 @@ const items = ref([
 
       <template v-slot:append>
         <v-list>
-        <v-list-item @click="">
-          <template v-slot:prepend>
-            <v-icon>mdi-cog</v-icon>
-          </template>
-          <v-list-item-title>Configurações</v-list-item-title>
-        </v-list-item>
-      </v-list>
+          <v-list-item @click="">
+            <template v-slot:prepend>
+              <v-icon>mdi-cog</v-icon>
+            </template>
+            <v-list-item-title>Configurações</v-list-item-title>
+          </v-list-item>
+        </v-list>
       </template>
     </v-navigation-drawer>
 

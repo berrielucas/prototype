@@ -3,13 +3,12 @@ import { useCounterStore } from '@/stores/counter'
 import { ref, onBeforeMount } from 'vue'
 import { RouterLink, RouterView, useRouter } from 'vue-router'
 
-const store = useCounterStore();
-const router = useRouter();
+const store = useCounterStore()
+const router = useRouter()
 
-onBeforeMount(()=>{
-  router.push({ name: 'imApp' });
-});
-
+onBeforeMount(() => {
+  router.push({ name: 'homeImApp' })
+})
 
 const itemsPrototype = ref([
   {
@@ -25,13 +24,13 @@ const itemsPrototype = ref([
     description: 'Criar fluxo de ChatsBots Infobip',
     routeName: 'imApp',
     icon: 'mdi-robot-angry'
-  },
-]);
+  }
+])
 
 function redirect(routeName) {
   setTimeout(() => {
     router.push({ name: routeName })
-  }, 400);
+  }, 400)
 }
 </script>
 
@@ -50,7 +49,16 @@ function redirect(routeName) {
         <v-icon class="d-flex mr-1">mdi-open-in-new</v-icon>
         <p class="d-flex">Docs</p>
       </v-btn> -->
-      <p class="mr-3" style="display: flex; align-items: center; font-size: 15px; color: var(--second-color); cursor: pointer;">
+      <p
+        class="mr-3"
+        style="
+          display: flex;
+          align-items: center;
+          font-size: 15px;
+          color: var(--second-color);
+          cursor: pointer;
+        "
+      >
         <v-icon class="d-flex mr-1" size="20">mdi-open-in-new</v-icon>
         Docs
       </p>

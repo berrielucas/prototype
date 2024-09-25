@@ -7,18 +7,18 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-*::-webkit-scrollbar {
+html::-webkit-scrollbar {
   width: 7px;
 }
 
-*::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track {
   background-color: #cccccc;
 }
 
-*::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb {
   background-color: #707070;
 }
 
-html{
+html {
   max-height: 100dvh;
 }

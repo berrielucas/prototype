@@ -13,15 +13,54 @@ const router = createRouter({
     {
       path: '/inscricao-matricula',
       name: 'imApp',
-      component: () => import('../views/imrb/IMAppView.vue'),
-      children: []
+      children: [
+        {
+          path: '',
+          name: 'homeImApp',
+          component: () => import('../views/imrb/IMAppView.vue')
+        },
+        // Protótipo
+        {
+          path: ':idPrototype',
+          name: 'prototype',
+          component: () => import('../views/imrb/PrototypeView.vue'),
+          children: []
+        },
+        // Processo
+        {
+          path: ':idPrototype/:idProcess',
+          name: 'process',
+          component: () => import('../views/imrb/PrototypeView.vue'),
+          children: []
+        },
+        // Etapa
+        {
+          path: ':idPrototype/:idProcess/:idPhase',
+          name: 'phase',
+          component: () => import('../views/imrb/PrototypeView.vue'),
+          children: []
+        },
+        // Passo
+        {
+          path: ':idPrototype/:idProcess/:idPhase/:idStep',
+          name: 'step',
+          component: () => import('../views/imrb/PrototypeView.vue'),
+          children: []
+        },
+        // Component
+        {
+          path: ':idPrototype/:idProcess/:idPhase/:idStep/:idComponent',
+          name: 'step',
+          component: () => import('../views/imrb/PrototypeView.vue'),
+          children: []
+        }
+      ]
     },
     {
-      path: '/inscricao-matricula/:idPrototype',
-      name: 'prot',
-      component: () => import('../views/imrb/PrototypeView.vue'),
-      children: []
-    },
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('../views/app/NotFoundView.vue')
+    }
   ]
 })
 
